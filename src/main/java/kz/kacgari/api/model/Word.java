@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 
 @Data
 @NoArgsConstructor
-@Document(collection = "WORD")
+@Document(collection = "word")
 public class Word {
     @Id
     @Field("id")
