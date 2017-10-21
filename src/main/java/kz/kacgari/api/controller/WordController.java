@@ -20,19 +20,20 @@ public class WordController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void createWord(@RequestBody Word word){
-        repository.save(word);
+    public String createWord(@RequestBody Word word) {
+        Word savedWord = repository.save(word);
+        return savedWord.getId();
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Word> findAllWords(){
+    public List<Word> findAllWords() {
         return repository.findAll();
     }
 
     @RequestMapping(
             method = RequestMethod.GET,
             value = "/{id}")
-    public Word findWordById(@PathVariable String id){
+    public Word findWordById(@PathVariable String id) {
         return repository.findOne(id);
     }
 
@@ -40,8 +41,10 @@ public class WordController {
             method = RequestMethod.DELETE,
             value = "/{id}"
     )
-    public void deleteWordWithId(@PathVariable String id){
-        repository.delete(id);
+    public String deleteWordWithId(@PathVariable String id) {
+        Word word = repository.findOne(id);
+        repository.delete(word);
+        return word.getId();
     }
 
 }

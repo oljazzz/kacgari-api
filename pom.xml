@@ -18,7 +18,7 @@
         <lombok-version>1.16.10</lombok-version>
         <junit-version>4.12</junit-version>
     </properties>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
