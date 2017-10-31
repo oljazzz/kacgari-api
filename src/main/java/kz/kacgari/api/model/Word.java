@@ -40,13 +40,7 @@ public class Word {
 
     @NotNull
     @Field("synonyms")
-    private List<Word> synonyms;
-
-
-    public Word(String id, String text) {
-        this.id = id;
-        this.text = text;
-    }
+    private List<String> synonymsWordsObjectId;
 
 
 }
