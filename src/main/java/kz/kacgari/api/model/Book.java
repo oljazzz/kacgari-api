@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-class Book {
+public class Book {
 
     private Author author;
     private String name;
