@@ -35,5 +35,4 @@ overridedb.*
 settings.xml
 target
 transaction-logs
-application.properties
 /src/main/resources/example.json
